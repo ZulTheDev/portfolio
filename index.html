@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Home</title>
+        <style>
+            /* Custom utility for glowing effect */
+            .glow-on-hover {
+                position: relative;
+                overflow: hidden;
+            }
+            .glow-on-hover::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: inherit;
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+            .glow-on-hover:hover::before {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body class="bg-black text-gray-400 font-sans">
+        <!-- Header Section -->
+        <header class="flex flex-wrap justify-center gap-3 p-6 bg-slate-900 text-gray-300 shadow-md rounded-lg hover:transition ease-in-out hover:duration-500 hover:bg-gradient-to-b hover:from-purple-700 hover:via-purple-900 hover:to-black hover:text-white">
+            <div class="flex-1 max-w-md text-center">
+                <img src="./images.min/potrait.png" alt="Portrait" width="100" height="100" class="rounded-full border-2 border-purple-500 mb-4 mx-auto">
+                <h1 class="text-2xl font-bold text-gray-200">Hi, I'm Zulfaqar!</h1>
+                <p class="text-lg font-medium text-gray-300 mt-2">Age: <span id="age" class="text-blue-400 hover:text-lime-500">...</span></p>
+                <p class="text-lg font-medium text-gray-300">Full Name: <span class="text-purple-400">Zulfaqar Dhiyaulhaq Bin Jamal</span></p>
+                <p class="mt-4 text-gray-400">
+                    I'm a self-driven tech enthusiast building innovative technology and prioritizing everyone's security.
+                </p>
+                <div class="mt-4 flex flex-col gap-2 items-center">
+                    <a href="https://linkedin.com/in/zulfaqarnet" class="flex items-center space-x-2 text-blue-400 hover:text-blue-600 transition duration-100 glow-on-hover">
+                        <svg class="w-12 h-12 transition-transform transform hover:scale-110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6975 11C12.6561 11 11 12.6057 11 14.5838V57.4474C11 59.4257 12.6563 61.03 14.6975 61.03H57.3325C59.3747 61.03 61.03 59.4255 61.03 57.4468V14.5838C61.03 12.6057 59.3747 11 57.3325 11H14.6975ZM26.2032 30.345V52.8686H18.7167V30.345H26.2032ZM26.6967 23.3793C26.6967 25.5407 25.0717 27.2703 22.4615 27.2703L22.4609 27.2701H22.4124C19.8998 27.2701 18.2754 25.5405 18.2754 23.3791C18.2754 21.1686 19.9489 19.4873 22.5111 19.4873C25.0717 19.4873 26.6478 21.1686 26.6967 23.3793ZM37.833 52.8686H30.3471L30.3469 52.8694C30.3469 52.8694 30.4452 32.4588 30.3475 30.3458H37.8336V33.5339C38.8288 31.9995 40.6098 29.8169 44.5808 29.8169C49.5062 29.8169 53.1991 33.0363 53.1991 39.9543V52.8686H45.7133V40.8204C45.7133 37.7922 44.6293 35.7269 41.921 35.7269C39.8524 35.7269 38.6206 37.1198 38.0796 38.4653C37.8819 38.9455 37.833 39.6195 37.833 40.2918V52.8686Z" fill="#006699"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/zulthedev" class="flex items-center space-x-2 text-gray-200 hover:text-gray-400 transition duration-100 glow-on-hover">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Github</span>
+                    </a>
+                    <a href="https://youtube.com/@FiresecuritySG" class="flex items-center space-x-2 text-red-500 hover:text-red-300 transition duration-100 glow-on-hover">
+                        <img src="https://via.placeholder.com/50" alt="Youtube Logo" class="w-12 h-12">
+                        <span>Youtube</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Featured Projects Section -->
+            <div class="flex-1 max-w-md">
+                <h1 class="text-2xl font-bold text-gray-200 mb-4">My Featured Projects</h1>
+                <div class="flex flex-col gap-4">
+                    <!-- Add project cards here -->
+                    <div class="bg-gray-700 p-4 shadow-md rounded-lg border border-gray-600 hover:bg-gray-600 transition duration-300 glow-on-hover">
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Certification Section -->
+            <div class="flex-1 max-w-md">
+                <h1 class="text-2xl font-bold text-gray-200 mb-4">My Recent Certification</h1>
+                <a href="/certs" class="hover:scale-105 transition duration-300 glow-on-hover">
+                    <img src="./images.min/YCEP2024.webp" alt="Certificate Picture" class="w-full h-auto rounded-lg shadow-md" width="100" height="100">
+                </a>
+            </div>
+        </header>
+        
+        <!-- Content Section -->
+        <main class="container mx-auto py-8 px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add article cards here -->
+                <div class="bg-black hover:bg-slate-900 hover:border-transparent p-4 shadow-lg rounded-lg border border-slate-700 transition duration-300 glow-on-hover">
+                    <a href="#" class="flex flex-col items-center text-center hover:text-gray-200 transition duration-300">
+                        <img src="https://via.placeholder.com/50" alt="" class="w-12 h-12 mb-4 hover:scale-105 transition duration-300">
+                        <h1 class="text-lg font-semibold text-gray-200">Article Name</h1>
+                        <h4 class="text-sm text-gray-400 mb-2">Article Tag</h4>
+                        <p class="text-gray-500">Description</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="bg-purple-800 text-gray-400 py-6 text-center">
+            <p class="font-medium text-gray-200">
+                Powered by <span title="Using this for UI and UX" class="font-semibold text-white hover:text-gray-200 transition duration-300">TailwindCSS</span>, 
+                <span title="Using this to optimize client render and improve performance" class="font-semibold text-white hover:text-gray-200 transition duration-300">AstroJS</span> 
+            </p>
+            <script src="https://liberapay.com/Zulance/widgets/button.js"></script>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
